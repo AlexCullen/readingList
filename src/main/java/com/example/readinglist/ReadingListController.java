@@ -19,12 +19,9 @@ import java.util.List;
 public class ReadingListController {
     private static final String reader = "craig";
 
+    @Autowired
     private ReadingListRepository readingListRepository;
 
-    @Autowired
-    public ReadingListController(ReadingListRepository readingListRepository) {
-        this.readingListRepository = readingListRepository;
-    }
 
     @RequestMapping(value = "test1", method=RequestMethod.GET)
     public String readersBooks(Model model) {
